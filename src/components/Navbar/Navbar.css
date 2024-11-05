@@ -1,0 +1,141 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Пространство между логотипом и меню */
+  align-items: center; /* Центрирование элементов по вертикали */
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  position: fixed;
+  top: 20px;
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translateX(-50%); /* Сдвиг назад на половину ширины */
+  border-radius: 10px; /* Закругленные углы */
+  z-index: 1000;
+  width: auto; /* Ширина по содержимому */
+  max-width: 100%; /* Максимальная ширина */
+}
+
+.logo {
+  color: white; /* Цвет текста логотипа */
+  font-size: 24px; /* Размер текста логотипа */
+  width: 40px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex; /* Размещаем ссылки в строку */
+  gap: 20px; /* Промежуток между ссылками */
+  list-style-type: none;
+  margin: 0; /* Убираем отступы */
+  padding: 0; /* Убираем отступы */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative; /* Для разделителей */
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  right: -10px; /* Положение разделителя */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background-color: white;
+}
+
+.nav-links a:last-child::after {
+  display: none; /* Убираем разделитель у последнего элемента */
+}
+
+.nav-links a:hover {
+  color: #e02424;
+}
+
+.burger-menu {
+  display: none; /* Скрываем бургер-меню по умолчанию */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0; /* Промежуток между линиями бургер-меню */
+  margin-right: 50px;
+}
+
+.close-button {
+  display: none;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%; /* Ширина навигации на весь экран */
+    max-width: 100%; /* Максимальная ширина */
+    left: 0; /* Привязка к левому краю */
+    transform: none; /* Убираем сдвиг */
+    border-radius: 0; /* Убираем закругленные углы */
+    justify-content: space-between; /* Пространство между логотипом и меню */
+  }
+
+  .nav-links {
+    display: none; /* Скрываем навигационные ссылки по умолчанию */
+  }
+
+  .nav-links.active {
+    display: flex; /* Показываем навигацию, когда бургер-меню активно */
+    flex-direction: column; /* Вертикальное размещение для бургер-меню */
+    position: fixed; /* Фиксированная позиция */
+    top: 0;
+    right: 0; /* Привязка к правому краю */
+    height: 100vh; /* Высота на весь экран */
+    width: 70%; /* Ширина выезжающего меню */
+    background-color: #1a1a1a; /* Фон меню */
+    padding: 20px; /* Отступы внутри меню */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Тень для правой стороны */
+    transform: translateX(100%); /* Исходное положение - за пределами экрана */
+    transition: transform 0.3s ease; /* Анимация при открытии/закрытии */
+  }
+
+  .nav-links.active {
+    transform: translateX(0); /* Выдвигаем меню на экран */
+  }
+
+  .burger-menu {
+    display: flex; /* Показываем бургер-меню на мобильных устройствах */
+  }
+
+  .nav-links.active .close-button {
+    display: block; /* Показываем кнопку закрытия */
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Отступ снизу для кнопки закрытия */
+  }
+
+  .overlay {
+    display: none; /* Скрываем оверлей по умолчанию */
+    position: fixed; /* Фиксированная позиция */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Фон оверлея */
+    z-index: 999; /* Значение z-index ниже, чем у меню */
+  }
+
+  .overlay.active {
+    display: block; /* Показываем оверлей, когда меню активно */
+  }
+}

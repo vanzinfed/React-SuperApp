@@ -1,0 +1,82 @@
+.future-section {
+  background-color: #040000;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.future-section h1 {
+  margin-bottom: 40px;
+}
+
+.future-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Добавляем обертывание для мобильных устройств */
+}
+
+.future-block {
+  width: 400px;
+  margin-bottom: 20px; /* Добавляем отступ снизу для мобильных устройств */
+}
+
+.arrow-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-block img {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.arrow-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.future-block h2 {
+  margin: 0; /* Убираем отступы у h2 */
+  margin-bottom: 10px; /* Добавляем отступ снизу для h2 */
+}
+
+.future-block p {
+  margin: 0; /* Убираем отступы у p */
+  text-align: center;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+  .future-content {
+    flex-direction: column; /* Изменяем направление на колонку */
+    align-items: center; /* Центрируем элементы по горизонтали */
+  }
+
+  .future-block {
+    width: 100%; /* Делаем блоки шириной в 100% */
+    max-width: 300px; /* Ограничиваем максимальную ширину */
+  }
+
+  .future-section h1 {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+  }
+
+  .future-block h2 {
+    font-size: 20px; /* Уменьшаем размер подзаголовка */
+  }
+
+  .future-block p {
+    font-size: 16px; /* Уменьшаем размер текста */
+  }
+}

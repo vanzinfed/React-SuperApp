@@ -1,0 +1,75 @@
+.advantages-section {
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  padding: 50px 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  filter: drop-shadow(0px 0px 20px #ff0000);
+}
+
+.advantages-section h1 {
+  margin-bottom: 40px;
+}
+
+.advantages-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Добавляем обертывание для мобильных устройств */
+}
+
+.advantage-block {
+  display: flex;
+  align-items: flex-start;
+  width: 400px;
+  margin-bottom: 20px; /* Добавляем отступ снизу для мобильных устройств */
+  text-align: left;
+  padding-right: 10px;
+}
+
+.advantage-block .icon {
+  width: 25px;
+  height: 25px;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+.advantage-block .text-content {
+  flex: 1;
+}
+
+.advantage-block h2 {
+  margin: 0; /* Убираем отступы у h2 */
+  margin-bottom: 10px; /* Добавляем отступ снизу для h2 */
+}
+
+.advantage-block p {
+  margin: 0; /* Убираем отступы у p */
+  text-align: left;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+  .advantages-content {
+    flex-direction: column; /* Изменяем направление на колонку */
+    align-items: center; /* Центрируем элементы по горизонтали */
+  }
+
+  .advantage-block {
+    width: 100%; /* Делаем блоки шириной в 100% */
+    max-width: 300px; /* Ограничиваем максимальную ширину */
+  }
+
+  .advantages-section h1 {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+  }
+
+  .advantage-block h2 {
+    font-size: 20px; /* Уменьшаем размер подзаголовка */
+  }
+
+  .advantage-block p {
+    font-size: 16px; /* Уменьшаем размер текста */
+  }
+}

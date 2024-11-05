@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 8em 2em; /* Упрощенное padding */
+  background-color: rgb(116, 11, 10);
+  transition: transform 200ms, padding 200ms;
+  font-size: var(--editor-font-size, 1rem);
+  border: 100px;
+  border-color:rgb(255, 255, 255);
+  box-sizing: border-box; /* Чтобы padding учитывался в ширине */
+}
+
+.about-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  padding: 40px; /* Убедитесь, что padding одинаковый со всех сторон */
+  width: 90%; /* Увеличиваем ширину черного блока */
+  max-width: 1000px; /* Увеличиваем максимальную ширину черного блока */
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box; /* Чтобы padding учитывался в ширине */
+}
+
+h2 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  margin-bottom: 30px;
+  margin-top: 0; /* Уменьшаем пространство сверху заголовка */
+}
+
+.features {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Добавлено для обтекания элементов */
+}
+
+.feature-block {
+  background-color: rgb(116, 11, 10);
+  padding: 20px;
+  padding-top: 0px;
+  border-radius: 8px;
+  width: 30%;
+  text-align: left; /* Выравнивание текста по левому краю */
+  box-sizing: border-box; /* Чтобы padding учитывался в ширине */
+  transition: box-shadow 0.3s ease;
+}
+
+.feature-block:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Белая тень */
+  transition: box-shadow 0.3s ease; /* Плавный переход */
+}
+
+
+.feature-block h3 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 24px;
+  margin-bottom: 10px;
+  max-width: 90%; /* Ограничиваем ширину заголовка */
+  overflow-wrap: break-word; /* Разрешаем перенос слов */
+  color: rgb(255, 255, 255, 0.8); /* Уменьшаем прозрачность текста */
+}
+
+.feature-block p {
+  font-size: 16px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4em 1em; /* Уменьшаем отступы на мобильных устройствах */
+  }
+
+  .about-content {
+    width: 95%; /* Увеличиваем ширину блока на мобильных устройствах */
+    padding: 20px; /* Уменьшаем отступы внутри блока */
+  }
+
+  h2 {
+    font-size: 28px; /* Уменьшаем размер шрифта заголовка */
+    margin-bottom: 20px; /* Уменьшаем нижний отступ */
+  }
+
+  .features {
+    flex-direction: column; /* Меняем направление на колонку для мобильных устройств */
+    gap: 10px; /* Уменьшаем промежуток между блоками */
+  }
+
+  .feature-block {
+    width: 100%; /* Ширина блоков на всю ширину экрана */
+    padding: 15px; /* Уменьшаем отступы внутри блоков */
+    box-sizing: border-box; /* Убедитесь, что padding и border включены в ширину и высоту */
+  }
+
+  .feature-block h3 {
+    font-size: 20px; /* Уменьшаем размер шрифта заголовков в блоках */
+  }
+
+  .feature-block p {
+    font-size: 14px; /* Уменьшаем размер шрифта параграфов в блоках */
+  }
+}

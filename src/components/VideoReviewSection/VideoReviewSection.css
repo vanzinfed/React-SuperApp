@@ -1,0 +1,60 @@
+.video-review-section {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  padding-bottom: 630px;
+  z-index: 1; /* Ensures it appears above other sections */
+}
+
+.parallax-background {
+  background-image: url("./background.jpg"); /* Replace with your image */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Set below the content */
+}
+
+.content-video {
+  position: relative;
+  z-index: 2; /* Make sure it sits above the parallax background */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for readability */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.review-video {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+  cursor: pointer; /* Ensures pointer cursor is displayed */
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .video-review-section {
+    padding: 40px 15px;
+    padding-bottom: 630px;
+  }
+
+  .content-video h2 {
+    font-size: 1.5em;
+  }
+
+  .review-video {
+    width: 100%;
+    height: auto;
+  }
+
+  .content p {
+    font-size: 1em;
+  }
+}

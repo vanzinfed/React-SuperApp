@@ -1,0 +1,67 @@
+.container {
+  background-color: #040000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  filter: drop-shadow(0px 0px 20px #ff0000);
+}
+
+.message-block {
+  flex: 1;
+  min-width: 200px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.map {
+  flex: 3;
+  height: 400px; /* Default height for larger screens */
+  min-height: 300px; /* Minimum height for mobile screens */
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .message-block {
+      min-width: auto;
+      width: 90%;
+      margin-bottom: 20px;
+  }
+
+  .map {
+      width: 100%;
+      height: 300px; /* Adjust height for mobile screens */
+      min-height: 300px; /* Ensure it has a minimum height */
+  }
+}

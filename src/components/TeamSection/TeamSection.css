@@ -1,0 +1,86 @@
+
+.team-section {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 50px 0;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.team-section h2 {
+  margin-bottom: 40px;
+  font-size: 3em;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px); /* Поднимаем карточку при наведении */
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 50%; /* Скругляем изображение */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .image-container img {
+  transform: scale(1.1); /* Увеличиваем изображение при наведении */
+}
+
+.member-info {
+  background-color: rgb(116, 11, 10); /* Цветной фон блока описания */
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.member-info h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.member-info p {
+  margin: 5px 0 0;
+  font-size: 1em;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team-member {
+    width: 100%;
+  }
+
+  .image-container {
+    width: 150px;
+    height: 150px;
+  }
+}

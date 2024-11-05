@@ -1,0 +1,44 @@
+.chat-bot-section {
+  position: fixed;
+  bottom: -3px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.open-chat-btn {
+  padding: 10px 20px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,65,11,1) 0%, rgba(0,221,84,1) 100%);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-bot-iframe-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.chat-bot-iframe {
+  width: 100%;
+  height: calc(100% - 40px); /* Leaves space for close button */
+  border: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.close-chat-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+}

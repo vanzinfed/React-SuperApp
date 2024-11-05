@@ -1,0 +1,102 @@
+.carousel-section {
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.carousel-section h1 {
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+  width: 91%;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  outline: none; /* Убираем обводку при нажатии */
+  border: none; /* Убираем возможную границу */
+  box-shadow: none; /* Убираем тень, если применена */
+}
+
+.carousel-item:focus img {
+  outline: none; /* Убираем обводку при фокусе */
+}
+
+.carousel-item.active img {
+  transform: scale(1.2); /* Увеличение центрального изображения */
+  z-index: 2; /* Перенос центрального изображения на передний план */
+}
+
+.slick-slide {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.slick-center {
+  opacity: 1; /* Центральное изображение более яркое */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+.slick-prev, .slick-next {
+  font-size: 45px; /* Увеличиваем размер кнопок навигации */
+  z-index: 3;
+  color: #333;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для стрелок */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  color: white;
+}
+
+.slick-prev {
+  left: -50px; /* Смещение кнопки "влево" */
+}
+
+.slick-next {
+  right: -50px; /* Смещение кнопки "вправо" */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .carousel-section h1 {
+    font-size: 24px;
+  }
+
+  .carousel-container {
+    width: 60%;
+  }
+
+  .slick-slide img {
+    width: 40%;
+  }
+
+  .slick-center img {
+    width: 80%;
+  }
+}

@@ -1,0 +1,126 @@
+.business-section {
+  background-color: #040000;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  filter: drop-shadow(0px 0px 20px #ff0000);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.business-section h1 {
+  margin-bottom: 40px;
+}
+
+.business-content {
+  display: flex;
+  justify-content: center;.business-section {
+    background-color: #040000;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    filter: drop-shadow(0px 0px 20px #ff0000);
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .business-section h1 {
+    margin-bottom: 40px;
+  }
+  
+  .business-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .business-item {
+    width: 400px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .business-item h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .business-item p {
+    margin: 0;
+    text-align: left;
+  }
+  
+  /* Медиа-запросы для мобильных устройств */
+  @media (max-width: 768px) {
+    .business-section {
+      padding: 20px 0;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  
+    .business-section h1 {
+      font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+  
+    .business-content {
+      flex-direction: column; /* Изменяем направление на колонку */
+      align-items: center; /* Центрируем элементы по горизонтали */
+    }
+  
+    .business-item {
+      width: 90%; /* Делаем блоки шириной в 90% */
+      max-width: 300px; /* Ограничиваем максимальную ширину */
+    }
+  
+    .business-item h2 {
+      font-size: 20px; /* Уменьшаем размер подзаголовка */
+    }
+  
+    .business-item p {
+      font-size: 16px; /* Уменьшаем размер текста */
+    }
+  }
+  
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.business-item {
+  width: 400px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.business-item h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.business-item p {
+  margin: 0;
+  text-align: left;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+  .business-section h1 {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+  }
+
+  .business-item {
+    width: 100%;
+  }
+
+  .business-item h2 {
+    font-size: 20px; /* Уменьшаем размер подзаголовка */
+  }
+
+  .business-item p {
+    font-size: 16px; /* Уменьшаем размер текста */
+  }
+}

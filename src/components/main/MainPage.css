@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+
+.main-page {
+  display: flex;
+  justify-content: center; /* Центрируем контент по горизонтали */
+  align-items: center;
+  background-image: url("./background.png"); /* укажите путь к вашему фоновому изображению */
+  background-size: cover; /* или "contain", если нужно */
+  background-position: center;
+  color: white;
+  padding: 50px;
+  height: 100vh;
+  box-sizing: border-box; /* Чтобы padding учитывался в высоте */
+}
+
+.content {
+  max-width: 50%;
+  margin: 0 20px; /* Добавляем отступы по бокам */
+}
+
+h1 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  max-width: 100%; /* Заголовок занимает всю ширину */
+  word-wrap: break-word; /* Разрешаем перенос слов */
+}
+
+p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease; /* Плавный переход */
+}
+
+.learn-more:hover {
+  background-color: #c41f1f; /* Изменение цвета на более тёмный при наведении */
+}
+
+.learn-more {
+  background-color: #e02424;
+  color: white;
+}
+
+.demo-version {
+  background-color: transparent;
+  color: #e02424;
+  border: 2px solid #e02424;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход */
+}
+
+.demo-version:hover {
+  background-color: white; /* Заполняем белым цветом при наведении */
+  color: #e02424; /* Цвет текста возвращается к красному */
+}
+
+.phone-image img {
+  height: 700px;
+  filter: drop-shadow(0px 0px 20px #ff0000);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .main-page {
+    flex-direction: column; /* Изменяем направление на колонку */
+    align-items: center; /* Центрируем контент */
+    padding: 20px; /* Уменьшаем отступы */
+    height: auto; /* Высота подстраивается под контент */
+  }
+
+  .content {
+    max-width: 100%; /* Увеличиваем ширину контента на мобильных */
+    text-align: center; /* Центрируем текст */
+  }
+
+  h1 {
+    font-size: 32px; /* Уменьшаем размер шрифта заголовков */
+    width: 100%; /* Устанавливаем ширину 100% */
+    text-align: center; /* Центрируем текст */
+  }
+
+  .title {
+    padding-top: 60px;
+  }
+
+  p {
+    font-size: 16px; /* Уменьшаем размер шрифта для абзацев */
+  }
+
+  .phone-image img {
+    height: 300px; /* Уменьшаем размер изображения */
+    width: auto; /* Позволяем изображению адаптироваться по ширине */
+  }
+
+  button {
+    padding: 8px 16px; /* Уменьшаем размеры кнопок */
+    font-size: 14px; /* Уменьшаем размер шрифта для кнопок */
+  }
+}
